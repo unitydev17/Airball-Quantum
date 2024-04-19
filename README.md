@@ -14,7 +14,7 @@
 <br/>
 Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum - необходима регистрация
 ## ECSStartup.cs
-<br/>
+
 [https://id.photonengine.com/account/signin](https://id.photonengine.com/account/signin)
 ## ECSStartup.cs
 <br/>

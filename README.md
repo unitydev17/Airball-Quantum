@@ -23,7 +23,7 @@
 
 ## Памятки по коду
 <br><br>
-Quantum_code представляет собой ECS проект. 
+# Quantum_code представляет собой ECS проект. 
 Создание систем происходит в SystemSetup:
 <br><br>
 ```C#
@@ -151,10 +151,9 @@ event Goal
     GoalStruct goalStruct;
 }
 ```
-
-```
 <br><br>
-Отправление события гола из системы подсчета очков: <br><br>
+Отправление события гола из системы подсчета очков: 
+<br><br>
 ```C#
 public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
 {
@@ -182,3 +181,7 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
     }
 }
 ```
+<br><br>
+Отправление события гола из системы подсчета очков: 
+<br><br>
+```C#

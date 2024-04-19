@@ -9,7 +9,7 @@
 <br/>
 ## Установка
 
-Репозиторий содержит в себе unity проект quantum-unity и solution симуляции в папке quantum-code. Подробнее можно посмотреть на старнице установки SDK
+Репозиторий содержит в себе unity проект [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) и solution симуляции в папке [quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code). Подробнее можно посмотреть на старнице установки SDK
 <br><br>
 [https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
 <br><br>
@@ -20,9 +20,9 @@
 ## Код
 Код разделен на два проекта, проект Unity и проект симуляции. При внесении изменений в проект симуляции его необходимо скомпилировать (!). При этом будут обновлены и сгенерированы общие для симуляции и Unity классы.
 
-## Quantum_code
+## [Quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code)
 
-Quantum_code представляет собой ECS проект. 
+[Quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code) представляет собой ECS проект. 
 Создание систем происходит в SystemSetup:
 <br><br>
 ```C#

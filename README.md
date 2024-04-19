@@ -8,7 +8,8 @@
 <br/>
 <br/>
 ## Установка
-Нужно скачать весь репозиторий и распаковать его [airball-quantum.zip](https://github.com/unitydev17/Airball-Quantum/archive/refs/heads/master.zip).
+Нужно скачать весь репозиторий [airball-quantum.zip](https://github.com/unitydev17/Airball-Quantum/archive/refs/heads/master.zip) и распаковать его.
+<br><br>
 Репозиторий содержит в себе unity проект [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) и solution симуляции в папке [quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code). Подробнее можно посмотреть на старнице установки SDK
 <br><br>
 [https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)

@@ -214,3 +214,76 @@ public class UIManager : QuantumCallbacks                                // чт
     }
 }
 ```
+<br><br>
+Для общения с симуляцией (моделью) из Unity (представление) используется механизм команд. Рассмотрим его на примере команды разъединения игрока:
+<br><br>
+```C#
+public class UIGame
+{
+    public void OnLeaveClicked()
+    {
+        var command = new DisconnectCommand                    // создаем команду с параметром номера игрока
+        {
+            actorId  = UIMain.Client.LocalPlayer.ActorNumber
+        };
+
+        QuantumRunner.Default.Game.SendCommand(command);       // отправляем команду в симуляцию
+    }
+}
+```
+<br><br>
+Нужно отметить, что перед этим необходимо описать команду в проекте симуляции и скомпилировать код. А также добавить команду в CommandSetup.User.cs
+<br><br>
+```C#
+namespace Quantum.AirBall.Commands
+{
+    public class DisconnectCommand : DeterministicCommand
+    {
+        public int actorId;
+        public override void Serialize(BitStream stream)
+        {
+            stream.Serialize(ref actorId);
+        }
+    }
+}
+
+
+namespace Quantum
+{
+    public static partial class DeterministicCommandSetup
+    {
+        static partial void AddCommandFactoriesUser(ICollection<IDeterministicCommandFactory> factories, RuntimeConfig gameConfig, SimulationConfig simulationConfig)
+        {
+            // user commands go here
+            factories.Add(new DisconnectCommand());
+        }
+    }
+}
+```
+<br><br>
+Прием команды в симуляции происходит в отдельной системе таким образом:
+<br><br>
+```C#
+public unsafe class PlayerCommandSystem : SystemMainThreadFilter<PlayerCommandSystem.Filter>
+{
+
+    public override void Update(Frame f, ref Filter filter)
+    {
+        var players = f.Filter<PlayerLink>();
+        var counter = 0;
+        while (players.Next(out _, out _)) counter++;    // посчитали всех игроков, может быть 1 или 2
+
+        for (var i = 0; i < counter; i++)
+        {
+            CheckDisconnectCmd(f, i);
+        }
+    }
+
+    private static void CheckDisconnectCmd(Frame f, int i)
+    {
+        if (!(f.GetPlayerCommand(i) is DisconnectCommand command)) return;    // если команда получена
+        f.Events.Disconnect(command.actorId);                                 // отправляем в unity view событие о дисконнекте. Для второго игрока появится сообщение о выходе из игры оппонента.
+        f.Signals.DisableSystems();                                           // останавливаем все системы
+    }
+}
+```

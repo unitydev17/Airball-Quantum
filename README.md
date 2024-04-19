@@ -23,7 +23,7 @@
 
 ## Памятки по коду
 
-quantum_code представляет собой ECS проект. Создание систем происходит в SytemSetup:
+quantum_code представляет собой ECS проект. Создание систем происходит в SystemSetup:
 
 
 ```C#
@@ -62,6 +62,34 @@ quantum_code представляет собой ECS проект. Создан�
                 new RestartSystem(),
                 new SystemManagementSystem()
             };
+        }
+    }
+```
+
+<br><br>
+
+Пример системы создания мяча BallSpawnSystem.cs:
+
+```C#
+public unsafe class BallSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSet
+    {
+        public void OnPlayerDataSet(Frame f, PlayerRef player)
+        {
+            var ball = f.Filter<BallComponent>();    // фильтр получает все сущности (entity) содержащие компонент BallComponent
+            if (ball.Next(out _, out _)) return;     // если есть хоть одна сущность с компонентом BallComponent, значит мяч создавать не нужно 
+
+            var prototype = f.FindAsset<EntityPrototype>("Resources/DB/Ball|EntityPrototype");    // путь на ассет мяча
+            var entity = f.Create(prototype);                                                     // создание сущности из ассета
+
+            if (!f.Unsafe.TryGetPointer<Transform2D>(entity, out var transform)) return;          // получаем указатель на компонент Transform2D созданной игровой сущности
+
+            var spawnPlaces = f.Filter<Spawn, Transform2D>();                                     // на сцене также есть объекты указывающие на места появления игроков и мяча, они представлены компонентами Spawn 
+            while (spawnPlaces.Next(out _, out var spawn, out var spawnTr))                       // пробегаем по всем Spawn сущностям в цикле
+            {
+                if (spawn.index != 0) continue;                                                   // для мяча предусмотрен индекс 0
+                transform->Position = spawnTr.Position;                                           // устанавливаем позицию мяча в точку со spawn.index = 0
+                break;
+            }
         }
     }
 ```

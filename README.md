@@ -164,7 +164,7 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
         while (players.NextUnsafe(out _, out var playerLink, out var score))    // пробегаем по всем игрокам
         {
             var actorId = f.PlayerToActorId(playerLink->Player);                // actorId - это номер игрока, заданный фреймворком, нужен чтобы понять в чьи ворота забит гол
-            if (actorId != gateIndex) score->value++;                           // увеличиваем очки игроку с другим индексом - тому, кто забил, а не тому чьи ворота
+            if (actorId != gateIndex) score->value++;                           // увеличиваем очки игроку с другим индексом тому, кто забил, а не тому чьи ворота
 
             if (playerLink->isMaster)                                            // первое значение счета, количество голов - для мастер-клиента (player1)
             {
@@ -173,7 +173,7 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
             else
             {
                 goalStruct.value_2 = score->value;                               // второе значение - для зависимого-клиента (player2)
-            }                                                                    // в дальнейшем в unity части мы используем это для правильной последовательсти отображения счета
+            }                                                                    // в дальнейшем в unity части мы используем это для правильной последовательности отображения счета
         }
 
         f.Events.Goal(goalStruct);                                               // отправляем событие в unity view

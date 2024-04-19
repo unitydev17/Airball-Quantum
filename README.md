@@ -183,7 +183,7 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
 <br><br>
 ## Quantum_unity
 <br><br>
-Получение события на стороне [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) происходит с помощью подписки. Посмотрим, как обрабатывается событие изменения счета, посланное из системы подсчета очков в модели: 
+Получение события на стороне [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) происходит с помощью подписки. Посмотрим, как обрабатывается событие изменения счета, посланное из симуляции (системы подсчета очков): 
 <br><br>
 ```C#
 public class UIManager : QuantumCallbacks                                // чтобы принимать события из модели нужно наследоваться от QuantumCallbacks

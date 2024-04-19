@@ -111,8 +111,27 @@ public class GoalSystem : SystemSignalsOnly, ISignalOnTriggerEnter2D
     {
         public void OnTriggerEnter2D(Frame f, TriggerInfo2D info)
         {
-            var gateIndex = f.Get<Gate>(info.Other).index;
-            f.Signals.OnGoalScored(gateIndex);
+            var gateIndex = f.Get<Gate>(info.Other).index;            // получаем из фрейма сущность содержащую компонент Gate (ворота)
+            f.Signals.OnGoalScored(gateIndex);                        // отправляем сигнал о том, что был забит гол и индекс ворот
         }
     }
+```
+<br><br>
+Получение сигнала в системе управления всеми системами: 
+<br><br>
+```C#
+public class SystemManagementSystem : SystemSignalsOnly, ISignalOnGoalScored
+    {
+        public void OnGoalScored(Frame f, int gateIndex)    // получаем сигнал о забитом голе - интерфейс ISignalOnGoalScored был сгенерирован ранее из Signals.qtn путем запуска проекта на компиляцию
+        {
+            DisableMainSystems(f);                          // выключаем физическую систему и систему управления битами
+        }
+
+        private static void DisableMainSystems(Frame f)
+        {
+            f.SystemDisable<PlayerMovementSystem>();
+            f.SystemDisable<Core.PhysicsSystem2D>();
+        }
+Ъ
+
 ```

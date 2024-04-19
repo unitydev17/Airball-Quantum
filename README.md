@@ -23,7 +23,8 @@
 
 ## Памятки по коду
 <br><br>
-### Quantum_code представляет собой ECS проект. 
+### Quantum_code
+Quantum_code представляет собой ECS проект. 
 Создание систем происходит в SystemSetup:
 <br><br>
 ```C#

@@ -10,7 +10,7 @@
 ## Установка
 Необходимо скачать весь репозиторий [airball-quantum.zip](https://github.com/unitydev17/Airball-Quantum/archive/refs/heads/master.zip) и распаковать его.
 <br><br>
-Репозиторий содержит в себе unity проект [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) и solution симуляции в папке [quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code). Подробнее можно посмотреть на странице установки 
+Репозиторий содержит в себе unity проект quantum_unity и solution симуляции в папке quantum_code. Подробнее можно посмотреть на странице установки 
 [Photon Quantum SDK](https://doc.photonengine.com/quantum/current/quantum-100/quantum-101)
 <br><br>
 Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum (необходима регистрация)
@@ -20,7 +20,7 @@
 ## Код
 Код разделен на два проекта, проект Unity и проект симуляции. При внесении изменений в проект симуляции его необходимо скомпилировать (!). При этом будут обновлены и сгенерированы общие для симуляции и Unity классы.
 
-## [Quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code)
+## Quantum_code
 
 [Quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code) представляет собой ECS проект. 
 Создание систем происходит в SystemSetup:
@@ -181,9 +181,9 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
 }
 ```
 <br><br>
-## [Quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity)
+## Quantum_unity
 <br><br>
-Получение события на стороне unity происходит с помощью подписки. Посмотрим, как обрабатывается событие изменения счета, посланное из системы подсчета очков в модели: 
+Получение события на стороне [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) происходит с помощью подписки. Посмотрим, как обрабатывается событие изменения счета, посланное из системы подсчета очков в модели: 
 <br><br>
 ```C#
 public class UIManager : QuantumCallbacks                                // чтобы принимать события из модели нужно наследоваться от QuantumCallbacks

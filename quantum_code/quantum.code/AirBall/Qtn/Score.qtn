@@ -1,0 +1,4 @@
+﻿component Score 
+{
+    int value;
+}

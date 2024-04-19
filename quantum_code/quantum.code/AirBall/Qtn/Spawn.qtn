@@ -1,0 +1,5 @@
+﻿component Spawn {
+    [HideInInspector]
+    entity_ref Entity;
+    int index;
+}

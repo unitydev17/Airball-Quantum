@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd8e95ae0daaec4496511105240e8a3, type: 3}
+  m_Name: AssetResources
+  m_EditorClassIdentifier: 
+  AssetBundlesGroup:
+    _resources: []
+  ResourcesGroup:
+    _resources:
+    - Path: Resources/DB/Configs/DefaultPhysicsMaterial
+      AssetRef:
+        Id:
+          Value: 1
+      ResourcePath: DB/Configs/DefaultPhysicsMaterial
+    - Path: Resources/DB/Configs/DefaultNavMeshAgentConfig
+      AssetRef:
+        Id:
+          Value: 2
+      ResourcePath: DB/Configs/DefaultNavMeshAgentConfig
+    - Path: Resources/DB/Configs/DefaultCharacterController2D
+      AssetRef:
+        Id:
+          Value: 3
+      ResourcePath: DB/Configs/DefaultCharacterController2D
+    - Path: Resources/DB/Configs/DefaultCharacterController3D
+      AssetRef:
+        Id:
+          Value: 4
+      ResourcePath: DB/Configs/DefaultCharacterController3D
+    - Path: Resources/DB/Configs/SimulationConfig
+      AssetRef:
+        Id:
+          Value: 5
+      ResourcePath: DB/Configs/SimulationConfig
+    - Path: Resources/DB/Ball|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 481557546506815934
+      ResourcePath: DB/Ball
+    - Path: Resources/DB/Top Down KCC Settings Asset
+      AssetRef:
+        Id:
+          Value: 492716525072054420
+      ResourcePath: DB/Top Down KCC Settings Asset
+    - Path: Resources/DB/Player|EntityView
+      AssetRef:
+        Id:
+          Value: 1249567995468090661
+      ResourcePath: DB/Player
+    - Path: Resources/DB/Map1
+      AssetRef:
+        Id:
+          Value: 1710471675203725834
+      ResourcePath: DB/Map1
+    - Path: Resources/DB/Ball|EntityView
+      AssetRef:
+        Id:
+          Value: 2211679646007819618
+      ResourcePath: DB/Ball
+    - Path: Resources/DB/Configs/BallPhysMaterial
+      AssetRef:
+        Id:
+          Value: 2646498305138947546
+      ResourcePath: DB/Configs/BallPhysMaterial
+    - Path: Resources/DB/Player|EntityPrototype
+      AssetRef:
+        Id:
+          Value: 4036549888259010878
+      ResourcePath: DB/Player
+    - Path: Resources/DB/Map1_mesh
+      AssetRef:
+        Id:
+          Value: 4182183522022618454
+      ResourcePath: DB/Map1_mesh

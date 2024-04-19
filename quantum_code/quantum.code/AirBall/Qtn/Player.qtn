@@ -1,0 +1,28 @@
+﻿#define PLAYER_COUNT 2
+#pragma max_players PLAYER_COUNT
+
+component PlayerLink
+{
+    player_ref Player;
+    Boolean isMaster;
+}
+
+component PlayersApproved
+{
+    int value;
+}
+
+synced event PlayersReady {
+}
+
+synced event Restarted {
+}
+
+
+event CheckViewPort {
+    player_ref playerRef;
+}
+
+event Disconnect {
+    int actorId;
+}

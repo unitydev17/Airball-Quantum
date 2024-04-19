@@ -1,0 +1,5 @@
+﻿input
+{
+    FPVector2 Direction;
+    FPVector2 MouseDirection;
+}

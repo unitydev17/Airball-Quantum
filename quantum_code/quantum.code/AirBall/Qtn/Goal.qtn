@@ -1,0 +1,15 @@
+﻿struct GoalStruct
+{
+    int value_1;
+    int value_2;
+}
+
+event Goal
+{
+    GoalStruct goalStruct;
+}
+
+component Gate 
+{
+    int index;
+}

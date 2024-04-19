@@ -1,0 +1,4 @@
+﻿component HitComponent
+{
+    FPVector2 direction;
+}

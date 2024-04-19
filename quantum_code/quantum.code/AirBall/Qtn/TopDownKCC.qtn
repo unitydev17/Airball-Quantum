@@ -1,0 +1,14 @@
+﻿asset TopDownKCCSettings;
+
+component TopDownKCC 
+{
+    asset_ref<TopDownKCCSettings> Settings;
+    [HideInInspector]
+    FP MaxSpeed;
+    [HideInInspector]
+    FP Acceleration;
+    [HideInInspector]
+    FPVector2 Velocity;
+    [HideInInspector]
+    FPVector2 Force;
+}

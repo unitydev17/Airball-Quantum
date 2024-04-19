@@ -1,0 +1,3 @@
+﻿signal OnReadyToPlay();
+signal OnGoalScored(int gateIndex);
+signal DisableSystems();

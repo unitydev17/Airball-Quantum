@@ -10,9 +10,7 @@
 ## Установка
 Необходимо скачать весь репозиторий [airball-quantum.zip](https://github.com/unitydev17/Airball-Quantum/archive/refs/heads/master.zip) и распаковать его.
 <br><br>
-Репозиторий содержит в себе unity проект [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) и solution симуляции в папке [quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code). Подробнее можно посмотреть на старнице установки SDK
-<br><br>
-[https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
+Репозиторий содержит в себе unity проект [quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity) и solution симуляции в папке [quantum_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_code). Подробнее можно посмотреть на странице установки [Photon Quantum SDK](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
 <br><br>
 Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum (необходима регистрация)
 <br><br>

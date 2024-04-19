@@ -5,9 +5,10 @@
 <br/>
 
 [![Photon Quantum ECS game](https://img.youtube.com/vi/RdnWkFfr25o/0.jpg)](https://www.youtube.com/watch?v=RdnWkFfr25o)
+<br/>
+<br/>
 ## Установка
-<br/>
-<br/>
+
 Репозиторий содержит в себе 2 проекта, один проект unity quantum-unity, второй проект симуляции quantum-code 
 [https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
 <br/>

@@ -12,11 +12,12 @@
 <br/>[https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
 <br/>
 Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum - необходима регистрация
+## ECSStartup.cs
 <br/>[https://id.photonengine.com/account/signin](https://id.photonengine.com/account/signin)
-## Установка
+## ECSStartup.cs
 <br/>
 <br/>
-## Код
+## ECSStartup.cs
 
 Код разделен на два проекта, проект Unity и проект симуляции. При внесении изменений в проект симуляции его необходимо скомпилировать (!). 
 <br/>При этом будут обновлены и сгенерированы общие для симуляции и Unity классы.

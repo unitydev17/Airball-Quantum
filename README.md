@@ -1,6 +1,6 @@
 # Airball-Quantum
 
-### Тестовая сетевая игра с использованием ECS фреймворка [Photon Quantum 2](https://www.photonengine.com/quantum)
+### Тестовая сетевая игра с использованием ECS фреймворка [Photon Quantum 2](https://doc.photonengine.com/quantum/current/quantum-intro)
 <br/>
 <br/>
 

@@ -9,7 +9,7 @@
 <br/>
 ## Установка
 
-Репозиторий содержит в себе 2 проекта, один проект unity quantum-unity, второй проект симуляции quantum-code
+Репозиторий содержит в себе unity проект quantum-unity и solution симуляции quantum-code. Подробнее можно посмотреть на старнице установки SDK
 <br><br>
 [https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
 <br><br>

@@ -14,7 +14,7 @@
 <br><br>
 [https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
 <br><br>
-Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum - необходима регистрация
+Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum (необходима регистрация)
 <br><br>
 [https://id.photonengine.com/account/signin](https://id.photonengine.com/account/signin)
 <br><br>
@@ -181,7 +181,10 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
     }
 }
 ```
+
+## [Unity_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity)
 <br><br>
 Отправление события гола из системы подсчета очков: 
 <br><br>
 ```C#
+

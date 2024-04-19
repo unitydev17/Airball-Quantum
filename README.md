@@ -14,3 +14,10 @@
 Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum - необходима регистрация 
 <br/>[https://id.photonengine.com/account/signin](https://id.photonengine.com/account/signin)
 
+<br/>
+<br/>
+## Код
+
+Код разделен на два проекта, проект Unity и проект симуляции. При внесении изменений в проект симуляции его необходимо скомпилировать (!). 
+<br/>При этом будут обновлены и сгенерированы общие для симуляции и Unity классы.
+

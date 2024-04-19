@@ -11,7 +11,7 @@
 
 Репозиторий содержит в себе 2 проекта, один проект unity quantum-unity, второй проект симуляции quantum-code<br><br>
 [https://doc.photonengine.com/quantum/current/getting-started/initial-setup](https://doc.photonengine.com/quantum/current/getting-started/initial-setup)
-<br/>
+<br><br>
 Для запуска нужно открыть quantum-unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum - необходима регистрация
 [https://id.photonengine.com/account/signin](https://id.photonengine.com/account/signin)
 ## ECSStartup.cs

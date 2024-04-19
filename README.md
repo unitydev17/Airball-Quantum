@@ -22,13 +22,10 @@
 
 
 ## Памятки по коду
-
-quantum_code представляет собой ECS проект. 
-
 <br><br>
+Quantum_code представляет собой ECS проект. 
 Создание систем происходит в SystemSetup:
-
-
+<br><br>
 ```C#
     public static class SystemSetup
     {
@@ -70,9 +67,8 @@ quantum_code представляет собой ECS проект.
 ```
 
 <br><br>
-
 Пример системы создания мяча BallSpawnSystem.cs:
-
+<br><br>
 ```C#
 public unsafe class BallSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSet
     {

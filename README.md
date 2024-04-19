@@ -177,14 +177,40 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
             }                                                                    // в дальнейшем в unity части мы используем это для правильной последовательсти отображения счета
         }
 
-        f.Events.Goal(goalStruct);                                               // отправляем сигнал в unity view
+        f.Events.Goal(goalStruct);                                               // отправляем событие в unity view
     }
 }
 ```
 <br><br>
 ## [Quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity)
 <br><br>
-Отправление события гола из системы подсчета очков: 
+Получение события на стороне unity происходит с помощью подписки. Посмотрим, как обрабатывается событие изменения счета, посланное из системы подсчета очков в модели: 
 <br><br>
 ```C#
+public class UIManager : QuantumCallbacks                                // чтобы принимать события из модели нужно наследоваться от QuantumCallbacks
+{
+    private bool _isMaster;
 
+    protected override void OnEnable()
+    {
+        QuantumEvent.Subscribe(this, (EventGoal evt) => OnGoal(evt));   // подписываемся на событие EventGoal, префикс Event генерируется автогенерацией кода при компиляции модели
+        _isMaster = UIMain.Client.LocalPlayer.IsMasterClient;           // нужно знать является ли игрок мастер-клиентом, чтобы правильно показать счет, кроме того повернуть экран, если не является
+    }
+
+    private void OnGoal(EventGoal evt)
+    {
+        var goalStruct = evt.goalStruct;                                // структура из модели пришла в представление
+
+        if (_isMaster)
+        {
+            _goalUI.SetScore(goalStruct.value_1, goalStruct.value_2);   // для мастер-клиента показать сначала value_1 потом value_2
+        }
+        else
+        {
+            _goalUI.SetScore(goalStruct.value_2, goalStruct.value_1);
+        }
+
+        _goalUI.gameObject.SetActive(true);                            // открыть окно со счетом
+    }
+}
+```

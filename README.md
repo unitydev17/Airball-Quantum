@@ -13,9 +13,7 @@
 Репозиторий содержит в себе unity проект quantum_unity и solution симуляции в папке quantum_code. Подробнее можно посмотреть на странице установки 
 [Photon Quantum SDK](https://doc.photonengine.com/quantum/current/quantum-100/quantum-101)
 <br><br>
-Для запуска нужно открыть проект quantum_unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum (необходима регистрация)
-<br><br>
-[https://id.photonengine.com/account/signin](https://id.photonengine.com/account/signin)
+Для запуска нужно открыть проект quantum_unity, и в конфигурации PhotonServerSetting.asset прописать AppId, полученное при создании новой игры в dashboard Quantum (необходима [регистрация](https://id.photonengine.com/account/signin))
 <br><br>
 ## Код
 Код разделен на два проекта, проект Unity и проект симуляции. При внесении изменений в проект симуляции его необходимо скомпилировать (!). При этом будут обновлены и сгенерированы общие для симуляции и Unity классы.

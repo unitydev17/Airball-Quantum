@@ -181,8 +181,8 @@ public unsafe class ScoreSystem : SystemSignalsOnly, ISignalOnGoalScored
     }
 }
 ```
-
-## [Unity_code](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity)
+<br><br>
+## [Quantum_unity](https://github.com/unitydev17/Airball-Quantum/tree/master/quantum_unity)
 <br><br>
 Отправление события гола из системы подсчета очков: 
 <br><br>

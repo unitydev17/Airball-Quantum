@@ -65,7 +65,6 @@ Quantum_code представляет собой ECS проект.
         }
     }
 ```
-
 <br><br>
 Пример системы создания мяча BallSpawnSystem.cs:
 <br><br>
@@ -91,4 +90,15 @@ public unsafe class BallSpawnSystem : SystemSignalsOnly, ISignalOnPlayerDataSet
             }
         }
     }
+```
+<br><br>
+Сообщения между системами внутри симуляции реализованы с помощью сигналов. 
+Сигналы описываются с помощью DSL (Domain specific language) языка и расположены в *.qtn файлах.
+Пример описания сигналов в Signals.qtn:
+<br><br>
+```C#
+signal OnReadyToPlay();
+signal OnGoalScored(int gateIndex);
+signal DisableSystems();
+
 ```
